@@ -8,8 +8,8 @@ const SearchSection = () => {
   return (
     <div className="max-w-4xl mx-auto -mt-16 relative z-10 px-4">
       <div className="bg-green-300 rounded-lg shadow-xl p-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-950">
+          <div className="relative ">
             <MapPin className="absolute left-3 top-3 text-gray-400" size={20} />
             <input
               type="text"
