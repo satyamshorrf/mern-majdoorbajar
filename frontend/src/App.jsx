@@ -18,72 +18,84 @@ import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 
 import Footer from "./components/Footer";
 
-
-
-
 function App() {
-  const {user, checkAuth, checkingAuth} = useUserStore();
+  const { user, checkAuth, checkingAuth } = useUserStore();
   const { getCartItems } = useCartStore();
 
   useEffect(() => {
-		checkAuth();
-	}, [checkAuth]);
+    checkAuth();
+  }, [checkAuth]);
 
-	useEffect(() => {
-		if (!user) return;
+  useEffect(() => {
+    if (!user) return;
 
-		getCartItems();
-	}, [getCartItems, user]);
-
-
+    getCartItems();
+  }, [getCartItems, user]);
 
   if (checkingAuth) return <LoadingSpinner />;
 
-
-
   return (
-    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,
-          rgba(16,185,129,0.3)_0%,rgba(10,80,60,0.2)_45%,rgba(0,0,0,0.1)_100%)]" />
-        </div>
+    <div className="relative">
+      {/* Background grid */}
+      <div className="absolute inset-0 bg-gray-900">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       </div>
 
       <div className="relative z-10 pt-20">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/signup" element={!user ?<SignUpPage /> : <Navigate to="/" />} />
-          <Route path="/login" element={!user ? <LoginPage /> : <Navigate to="/" />} />
           <Route
-           path="/secret-dashboard" 
-           element={user?.role === "admin" ? <AdminPage /> : <Navigate to="/login" />} 
+            path="/signup"
+            element={!user ? <SignUpPage /> : <Navigate to="/" />}
           />
           <Route
-           path="/category/:category" 
-           element={< CategoryPage />} 
-           />
+            path="/login"
+            element={!user ? <LoginPage /> : <Navigate to="/" />}
+          />
           <Route
-           path="/cart" element={user ? <CartPage /> : <Navigate to="/login" />} 
-           />
+            path="/secret-dashboard"
+            element={
+              user?.role === "admin" ? <AdminPage /> : <Navigate to="/login" />
+            }
+          />
+          <Route path="/category/:category" element={<CategoryPage />} />
           <Route
-           path="/purchase-success" element={user ? <PurchaseSuccessPage /> :
-             <Navigate to="/login" />} 
-           />
+            path="/cart"
+            element={user ? <CartPage /> : <Navigate to="/login" />}
+          />
           <Route
-           path="/purchase-cancel" element={user ? <PurchaseCancelPage /> :
-             <Navigate to="/login" />} 
-           />
+            path="/purchase-success"
+            element={user ? <PurchaseSuccessPage /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/purchase-cancel"
+            element={user ? <PurchaseCancelPage /> : <Navigate to="/login" />}
+          />
         </Routes>
       </div>
-      <Toaster /> 
+      <Toaster />
       <Footer />
-      
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+      {/* Background gradient */}
+
+
+//  <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
+//       <div className="absolute inset-0 overflow-hidden">
+//         <div className="absolute inset-0">
+//           <div
+//             className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,
+//           rgba(16,185,129,0.3)_0%,rgba(10,80,60,0.2)_45%,rgba(0,0,0,0.1)_100%)]" />
+//         </div>
+//       </div>
