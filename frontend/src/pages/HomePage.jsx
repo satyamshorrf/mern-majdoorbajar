@@ -5,14 +5,15 @@ import FeaturedProducts from "../components/FeaturedProducts";
 
 import SearchSection from "../components/SearchSection";
 
+import { BrickWall, Zap, Paintbrush, Hammer, Droplet, Plane } from 'lucide-react'; // Import your icons
+
 const categories = [
-  { href: "/jeans", name: "Jeans", imageUrl: "/jeans.jpg" },
-  { href: "/t-shirts", name: "T-shirts", imageUrl: "/tshirts.jpg" },
-  { href: "/shoes", name: "Shoes", imageUrl: "/shoes.jpg" },
-  { href: "/glasses", name: "Glasses", imageUrl: "/glasses.png" },
-  { href: "/jackets", name: "Jackets", imageUrl: "/jackets.jpg" },
-  { href: "/suits", name: "Suits", imageUrl: "/suits.jpg" },
-  { href: "/bags", name: "Bags", imageUrl: "/bags.jpg" },
+  { href: "/labor-and-mistry", title: " LABOR ", subtitle: "Explore Services", bgColor: "bg-blue-600", Icon: BrickWall },
+  { href: "/electrician", title: "ELECTRICIAN", subtitle: "Find Electricians", bgColor: "bg-yellow-600", Icon: Zap },
+  { href: "/painter", title: "PAINTER", subtitle: "Hire Painters", bgColor: "bg-purple-600", Icon: Paintbrush },
+  { href: "/carpenter", title: "CARPENTER", subtitle: "Book Carpenters", bgColor: "bg-green-600", Icon: Hammer },
+  { href: "/plumber", title: "PLUMBER", subtitle: "Best Deals", bgColor: "bg-pink-800", Icon: Droplet },
+  { href: "/travel", title: "TRAVEL", subtitle: "Best Deals", bgColor: "bg-red-800", Icon: Plane },
 ];
 
 const HomePage = () => {
