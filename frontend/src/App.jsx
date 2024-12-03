@@ -17,6 +17,7 @@ import PurchaseSuccessPage from "./pages/PurchaseSuccessPage";
 import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 
 import Footer from "./components/Footer";
+import ChallengePage from "./pages/ChallengePage";
 
 function App() {
   const { user, checkAuth, checkingAuth } = useUserStore();
@@ -73,6 +74,7 @@ function App() {
         </Routes>
       </div>
       <Toaster />
+      <ChallengePage />
       <Footer />
     </div>
   );
