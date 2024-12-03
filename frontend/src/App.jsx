@@ -16,6 +16,8 @@ import { useCartStore } from "./stores/useCartStore";
 import PurchaseSuccessPage from "./pages/PurchaseSuccessPage";
 import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 
+import Footer from "./components/Footer";
+
 
 
 
@@ -78,6 +80,8 @@ function App() {
         </Routes>
       </div>
       <Toaster /> 
+      <Footer />
+      
     </div>
   );
 }
