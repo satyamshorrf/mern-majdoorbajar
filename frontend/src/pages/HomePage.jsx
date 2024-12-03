@@ -25,10 +25,10 @@ const HomePage = () => {
       <h1 className="text-6xl text-green-500 font-extrabold">MajdoorBajar</h1>{" "}
       <br />
       <h2 className="text-3xl text-green-400 font-bold mt-2">
-        Explore Our Categories
+        Find Skilled Workers Near You
       </h2>
       <p className="text-gray-400 mt-2" style={{ fontSize: "20px" }}>
-        Discover the best Labor & Mistry in Madhepura
+	  Connect with reliable laborers, electricians, and more
       </p>{" "}
       <br />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
