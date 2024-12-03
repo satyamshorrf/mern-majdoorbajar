@@ -55,9 +55,17 @@ const Footer = () => {
           </p>
           {/* Social Media Links */}
           <div className="mt-8 flex justify-center lg:justify-start space-x-4">
-            <Facebook className="text-gray-400 hover:text-white cursor-pointer" />
-            <Instagram className="text-gray-400 hover:text-white cursor-pointer" />
-            <Youtube className="text-gray-400 hover:text-white cursor-pointer" />
+          <a href="https://facebook.com" className="text-gray-400 hover:text-white" aria-label="Facebook">
+              <Facebook className="w-5 h-5" />
+            </a>
+
+            <a href="https://instagram.com" className="text-gray-400 hover:text-white" aria-label="Instagram">
+              <Instagram className="w-5 h-5" />
+            </a>
+           
+            <a href="https://youtube.com" className="text-gray-400 hover:text-white" aria-label="Youtube">
+              <Youtube className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>
