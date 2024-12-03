@@ -3,6 +3,8 @@ import CategoryItem from "../components/CategoryItem";
 import { useProductStore } from "../stores/useProductStore";
 import FeaturedProducts from "../components/FeaturedProducts";
 
+import SearchSection from "../components/SearchSection";
+
 const categories = [
   { href: "/jeans", name: "Jeans", imageUrl: "/jeans.jpg" },
   { href: "/t-shirts", name: "T-shirts", imageUrl: "/tshirts.jpg" },
@@ -31,6 +33,18 @@ const HomePage = () => {
 	  Connect with reliable laborers, electricians, and more
       </p>{" "}
       <br />
+
+<br /><br />
+      <div className="flex justify-center ">
+      <SearchSection />  
+      </div>
+      <br />
+
+
+
+
+
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {categories.map((category) => (
           <CategoryItem category={category} key={category.name} />
